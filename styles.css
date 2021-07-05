@@ -1,0 +1,345 @@
+body{
+  margin: 0;
+  display: flex;
+  flex-direction:column;
+  height: 100vh;
+}
+
+.binary-header {
+  width: 100%;
+  background-color: #f1f1f1d8;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-150%);
+  animation: ani 1s forwards;
+}
+
+@keyframes ani {
+    0% {transform: translateY(-150%);}
+    100% {transform: translateY(0);}
+  }
+
+.main-logo {
+    margin-left: 130px;
+    margin-top: 15px;
+    height: 50px;
+    max-width: 50%;       
+}
+
+.notification-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    position: absolute;   
+    right: 200px;
+}
+
+.notification-icon:hover {
+    background-color: #d8d8d8; 
+}
+
+/*.dropdown-menu{
+   
+}*/
+
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #ffffff;
+    opacity: 0;
+    padding: 20px;
+    border-bottom: 2 px solid #f1f1f1d8;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.060);
+    position:relative;
+    right: 150px;
+}
+
+.dropdown-menu ul{
+    list-style-type:none;
+    padding: 0;
+}
+
+.dropdown-menu a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.dropdown-menu label{
+    display: inline-block;
+    cursor: pointer;
+    background: #fd8b2e;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align:center;
+    color:#ffffff;
+    font: bold 20px Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 5px 5px 5px 5px;
+    margin-top: 20px;
+    margin-right: 130px;
+}
+
+input#menu {
+    display: none;
+    overflow: hidden;
+}
+
+label:hover {
+    background: #d66c15; 
+}
+
+input:checked ~ label{
+    background: #d66c15;  
+}
+
+input:checked ~ .menu-content{
+    max-height: 100%;
+    opacity: 100%;
+}
+
+a:hover {
+    background-color: #F7F7F7;
+    }
+
+.about-user {
+    color: #bebdbd;
+    text-decoration: none;
+    list-style: none;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 4px;
+}
+
+hr {
+    width: 100%;
+    border-top: 2px solid #bebdbd;
+}
+
+
+.notfound {
+    width: 100%;
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}    
+
+.notfound h1 {
+    font-family: titillium web,sans-serif;
+    font-size: 186px;
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+    color: #646363;
+    -webkit-animation: pulsing 2s infinite;
+    animation: pulsing 2s infinite;
+}
+
+@-webkit-keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5)
+    }
+    50% {
+      -webkit-transform: scale(1.0, 1.0);
+      transform: scale(1.0, 1.0);
+    }
+    100% {
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+    }
+  }
+  
+  @keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5)
+    }
+    50% {
+      -webkit-transform: scale(1.0, 1.0);
+      transform: scale(1.0, 1.0);
+    }
+    100% {
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+    }
+  }
+
+
+.notfound h2 {
+    font-family: titillium web,sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.notfound p {
+    font-family: montserrat,sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.notfound a {
+    font-family: titillium web,sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    background: #fd8b2e;
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.notfound a:hover{
+    background: #d66c15;
+}
+
+.notifications {
+    width: 220px;
+    height: 60px;
+    padding: 10px;
+    background-color: #b7b7ff;
+    opacity: 80%;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    -webkit-animation: backInRight 1.5s;
+    animation: backInRight 1.5s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes backInRight {
+    0% {
+      transform: translateX(2000px) scale(.7);
+      opacity: .7;
+    }
+  
+    80% {
+      transform: translateX(0px) scale(.7);
+      opacity: .7;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes backInRight {
+    0% {
+      transform: translateX(2000px) scale(.7);
+      opacity: .7;
+    }
+  
+    80% {
+      transform: translateX(0px) scale(.7);
+      opacity: .7;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .backInRight {
+    animation: backInRight 0.5s ease forwards;
+  }
+
+.notifications p{
+    font-family: sans-serif;
+    color: #000000;
+    text-align:left;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.popup-notifications {
+    /*display: none;*/
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+}
+
+
+.icons {
+    height: 30px;
+    width: 30px; 
+    color: #ffffff;
+    float: left;
+}
+
+@media screen and (max-width: 600px) {
+  
+    .main-logo {
+        height: 50%;
+        max-width: 20%;   
+        margin-left: 20px;
+    }
+    
+    .notification-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .dropdown-menu label{
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .notfound h1 {
+        font-size: 100px;
+        font-weight: 900;
+    }   
+
+    .notfound h2 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .notfound p {
+        font-size: 12px;
+    }
+    
+    .notfound a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .notfound {
+        margin-left: 20px;  
+        margin-right: 20px;      
+    }    
+
+    .notifications {
+        width: 150px;
+        height: 30px;
+    }
+
+    .notifications p{
+        font-size: 10px; 
+        padding-left: 20px;
+    }
+
+    .icons {
+        height: 15px;
+        width: 15px; 
+    }    
+}
